@@ -80,10 +80,14 @@
                         
                         .answerDiv {
                             background: rgba(255, 255, 255, 0.5);
+                            margin-right: 40px;
+                            
                         }
                         
                         .questionDiv {
-                            width: 45em;
+                            width: 40em;
+                            margin-top: 4rem;
+                            margin-left: 60px;
                         }
                         
                         .home-div {
