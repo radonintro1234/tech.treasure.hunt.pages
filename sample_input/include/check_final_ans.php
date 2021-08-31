@@ -1,9 +1,9 @@
 <?php
-    require './dbconfig.php';
+    include './dbconfig.php';
 
     if(isset($POST['submit'])){
 
-        $answer = mysqli_real_escape_string($connection, $POST['']);
+        $answer = mysqli_real_escape_string($connection, $_POST['']);
         $answer = strtolower($answer);                                  # converts to lowercase
         if( ! strcmp($answer, 'stealthy')){                             # compares with stealthy
             return true;
