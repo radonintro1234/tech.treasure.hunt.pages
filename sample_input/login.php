@@ -6,25 +6,23 @@
     if( isset($_POST['submit']) ){
         
         # data-retrieval
-        $lead_name = mysqli_real_escape_string($connection, $_POST['']);
-        $mob_no = mysqli_real_escape_string($connection, $_POST['']);
-        $branch = mysqli_real_escape_string($connection, $_POST['']);
-        $year = mysqli_real_escape_string($connection, $_POST['']);
+        $team_name = mysqli_real_escape_string($connection, $_POST['']);
+        $passcode = mysqli_real_escape_string($connection, $_POST['']);
         $curr_time = time();
 
-        # query-processing
-        $login_query = "INSERT INTO `users` (`lead_name`, `mob_no`, `branch`, `year`, `reg_time`) VALUES('$lead_name', '$mob_no', '$branch', '$year', '$curr_time')";
+        # fetch-credentials
+        $login_query = "SELECT `team_name`, `passcode` FROM `credentials` WHERE `team_name`='$team_name' AND `passcode`='$passcode';";
         $result = mysqli_query($connection, $login_query);
         
-        if( !$result ){
+        if( mysqli_num_rows($result) == 0 ){
             echo "
             <script>
-                alert('Error! There was error will logging you in. Please try again!');
+                alert('Error! Invalid Credentials!');
             </script>";
         }
         else{
             session_start();
-            $_SESSION['user'] = $result;
+            $_SESSION['user'] = $team_name;
             echo "
             <script>
                 window.location.href= './question.php';
