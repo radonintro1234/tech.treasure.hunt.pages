@@ -133,7 +133,7 @@ foreach($_SESSION['displayedQuestionArr'] as $element){
 <?php
 }
 else{
-    header('location:index.html');
+    header('location:index.php');
 }
 
 
