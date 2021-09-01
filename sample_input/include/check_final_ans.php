@@ -1,13 +1,15 @@
 <?php
 session_start();
-    include './dbconfig.php';
+    require 'dbconfig.php';
 
-    if(isset($POST['submit'])){
+    if(isset($_POST['submit'])){
 
-        $answer = mysqli_real_escape_string($connection, $_POST['']);
+        $answer = mysqli_real_escape_string($con, $_POST['answer']);
         $answer = strtolower($answer);                                  # converts to lowercase
-        if( ! strcmp($answer, 'stealthy')){                             # compares with stealthy
+        if($answer=='stealthy'){                             # compares with stealthy
            $_SESSION['heist_solved']=1;
+           require_once 'db_query.inc.php';
+           
             header('location:../heist_completed.php');
         }
         else{
@@ -16,10 +18,10 @@ session_start();
                 alert('Wrong answer, please try again!');
                 document.location='../final_question.php';
             </script>";
-            return false;
+            
         }
     }
     else{
-        return false;
+  echo 'hello';
     }
 ?>
