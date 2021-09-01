@@ -19,28 +19,18 @@
 <body id="form-body">
     <div class="container-fluid">
         <div id="signup-form" class="container p-4 rounded-lg shadow shadow-lg font-weight-bold mt-5 " data-aos="fade-down-left" data-aos-delay="400">
-            <form action="#" method="POST">
+            <form action="./include/login.php" method="POST">
                 <div class="form-group">
-                    <label class="lead text-light" for="inputFirstName">First Name</label>
-                    <input type="text" class="form-control border border-dark" id="inputFirstName" placeholder="First Name">
+                    <label class="lead text-light" for="inputFirstName">Team Name</label>
+                    <input type="text" class="form-control border border-dark" id="inputFirstName" placeholder="Team Name" name="team-name" required>
                 </div>
                 <div class="form-group">
-                    <label class="lead text-light" for=" inputLastName ">College Name</label>
-                    <input type="text " class="form-control border border-dark " id="inputLastName " placeholder="College Name ">
-                </div>
-
-                <div class="form-group">
-                    <label class="lead text-light" for="inputEmail4 ">Year</label>
-                    <input type="email" class="form-control border border-dark " id="inputEmail4 " placeholder="Enter the Year ">
-                </div>
-
-                <div class="form-group">
-                    <label class="lead text-light " for="inputPassword4 ">Phone No</label>
-                    <input type="text" class="form-control border border-dark " id="inputPassword4 " placeholder="Enter your Phone no ">
+                    <label class="lead text-light" for=" inputLastName ">Passcode</label>
+                    <input type="password" class="form-control border border-dark " id="inputLastName " placeholder="College Name" name="passcode" required>
                 </div>
 
                 <div class="form-group text-center ">
-                    <button type="submit" class=" submitForm btn btn-lg btn-outline-danger text-light pr-5 pl-5 font-weight-bold border-rounded ">VAMOS</button>
+                    <button type="submit" class=" submitForm btn btn-lg btn-outline-danger text-light pr-5 pl-5 font-weight-bold border-rounded " name="submit">VAMOS</button>
                 </div>
 
             </form>
