@@ -45,7 +45,7 @@ function db_get_ques_data($currentLetter)
 
 function add_submit_time_to_db($con, $teamname)
 {
-
+session_start();
     if ($con === false) {
         die("ERROR: Could not connect. " . mysqli_connect_error());
         echo 'Cannot connect to database';
@@ -59,6 +59,7 @@ function add_submit_time_to_db($con, $teamname)
         }
         $time = strval($time);
         $start_time = strval($_SESSION['start_time']);
+        $_SESSION['time_taken_by_team']=$time_required;
         $p = 'ssss';
         mysqli_stmt_bind_param($stmt, $p, $time, $teamname, $start_time, $time_required);
 
