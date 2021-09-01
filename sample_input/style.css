@@ -1,18 +1,21 @@
 body {
-    /* background-image: url(images/nnnn.jpg); */
+    background-image: url(images/nnnn.jpg);
 }
 
 .answerDiv {
     background: rgba(255, 255, 255, 0.5);
-    margin-right: 40px;
-    transform: translateY(50%);
+    margin-right: 2rem;
+    transform: translateY(5vh);
 }
 
 .questionDiv {
     width: 40em;
     margin-top: 4rem;
-    margin-left: 60px;
-    transform: translateY(20%);
+    margin-left: 3rem;
+    transform: translateY(5vh);
+    margin-bottom: 3rem;
+    height: 30em;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .home-div {
@@ -29,7 +32,7 @@ body {
 #signup-form {
     background: transparent;
     margin-left: 60rem;
-    transform: translateY(20%);
+    transform: translateY(50vh);
 }
 
 .form-control:not(:placeholder-shown) {
@@ -43,4 +46,19 @@ body {
 .form-control::placeholder {
     color: black;
     /* opacity: 1; */
+}
+
+#logodiv1 {
+    margin-left: 3rem;
+}
+
+#logodiv2 {
+    margin-left: 32rem;
+}
+
+@media (max-width:1443px) {
+    .questionDiv {
+        width: 30em;
+        height: 20em;
+    }
 }
