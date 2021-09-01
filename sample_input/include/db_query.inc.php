@@ -1,86 +1,84 @@
 <?php
 
- function db_get_ques_data($currentLetter){
-     require_once 'dbconfig.php';
-    if($con === false){
+function db_get_ques_data($currentLetter)
+{
+    require_once 'dbconfig.php';
+    if ($con === false) {
         die("ERROR: Could not connect. " . mysqli_connect_error());
         echo 'Cannot connect to database';
-    }
-    else{
-        $query='Select * from questions WHERE initial = ?';
-        $stmt= mysqli_stmt_init($con);
-        if(!mysqli_stmt_prepare($stmt, $query))
-    {
-        print "Failed to prepare statement\n";
-    }
-    $p='s';
-    mysqli_stmt_bind_param($stmt,$p, $currentLetter, );
-        
-    mysqli_stmt_execute($stmt);
-        
+    } else {
+        $query = 'Select * from questions WHERE initial = ?';
+        $stmt = mysqli_stmt_init($con);
+        if (!mysqli_stmt_prepare($stmt, $query)) {
+            print "Failed to prepare statement\n";
+        }
+        $p = 's';
+        mysqli_stmt_bind_param($stmt, $p, $currentLetter,);
+
+        mysqli_stmt_execute($stmt);
+
         $result = mysqli_stmt_get_result($stmt);
         mysqli_stmt_close($stmt);
-        $numOfRows=mysqli_num_rows($result);
-        
-       if($numOfRows != 0){
-           if($numOfRows==1){
-            $qIndex=0;    
-           }
-           else{
-           $qIndex=random_int(0,$numOfRows-1);}
-           $quesData=mysqli_fetch_all($result,MYSQLI_ASSOC);
-           return $quesData[$qIndex];
-       }
-       else{
-           echo '<script>Alert("Specified letter not found in db");</script>';
-       }
-    
+        $numOfRows = mysqli_num_rows($result);
+
+        if ($numOfRows != 0) {
+            if ($numOfRows == 1) {
+                $qIndex = 0;
+            } else {
+                while (true) {
+                    $qIndex = random_int(0, $numOfRows - 1);
+                    $quesData = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                    if (!count($_SESSION['displayedQuestionArr'])) {
+                        break;
+                    } elseif (!in_array($quesData[$qIndex]['sr'], $_SESSION['displayedQuestionArr'])) {
+                        array_push($_SESSION['displayedQuestionArr'], $quesData[$qIndex]['sr']);
+                        break;
+                    }
+                }
+                return $quesData[$qIndex];
+            }
+        } else {
+            echo '<script>Alert("Specified letter not found in db");</script>';
+        }
     }
-    
 }
 
-function add_submit_time_to_db($con,$teamname){
-    
-    if($con === false){
+function add_submit_time_to_db($con, $teamname)
+{
+
+    if ($con === false) {
         die("ERROR: Could not connect. " . mysqli_connect_error());
         echo 'Cannot connect to database';
-    }
-    else{
-        $time=time();
-        $time_required=strval(gmdate('H:i:s', ($time-$_SESSION['start_time'])));
-        $query='insert into records (submit_time ,team_name,reg_time,required_time) Values(?,?,?,?)';
-        $stmt= mysqli_stmt_init($con);
-        if(!mysqli_stmt_prepare($stmt, $query))
-    {
-        print "Failed to prepare statement\n";
-    }
-    $time=strval($time);
-    $start_time=strval($_SESSION['start_time']);
-    $p='ssss';
-    mysqli_stmt_bind_param($stmt,$p,$time, $teamname,$start_time,$time_required);
-        
-    mysqli_stmt_execute($stmt);
-        
+    } else {
+        $time = time();
+        $time_required = strval(gmdate('H:i:s', ($time - $_SESSION['start_time'])));
+        $query = 'insert into records (submit_time ,team_name,reg_time,required_time) Values(?,?,?,?)';
+        $stmt = mysqli_stmt_init($con);
+        if (!mysqli_stmt_prepare($stmt, $query)) {
+            print "Failed to prepare statement\n";
+        }
+        $time = strval($time);
+        $start_time = strval($_SESSION['start_time']);
+        $p = 'ssss';
+        mysqli_stmt_bind_param($stmt, $p, $time, $teamname, $start_time, $time_required);
+
+        mysqli_stmt_execute($stmt);
+
         $result = mysqli_stmt_get_result($stmt);
         mysqli_stmt_close($stmt);
-        
-        
-       if($result){
-          return true;
-           }
-          return false;
+
+
+        if ($result) {
+            return true;
+        }
+        return false;
     }
-
-
 }
 
 
-function add_start_time_to_db($teamname){
-   
-   $_SESSION['start_time']=time();
-   return true;
+function add_start_time_to_db($teamname)
+{
 
-
+    $_SESSION['start_time'] = time();
+    return true;
 }
-
-?>
