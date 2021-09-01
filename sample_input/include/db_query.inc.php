@@ -28,10 +28,10 @@ function db_get_ques_data($currentLetter)
                 while (true) {
                     $qIndex = random_int(0, $numOfRows - 1);
                     $quesData = mysqli_fetch_all($result, MYSQLI_ASSOC);
-                    if (!count($_SESSION['displayedQuestionArr'])) {
+                    if (!count($_SESSION['questionArr'])) {
                         break;
-                    } elseif (!in_array($quesData[$qIndex]['sr'], $_SESSION['displayedQuestionArr'])) {
-                        array_push($_SESSION['displayedQuestionArr'], $quesData[$qIndex]['sr']);
+                    } elseif (!in_array($quesData[$qIndex]['sr'], $_SESSION['questionArr'])) {
+                        array_push($_SESSION['questionArr'], $quesData[$qIndex]['sr']);
                         break;
                     }
                 }

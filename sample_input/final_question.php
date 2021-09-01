@@ -1,6 +1,13 @@
 <?php 
 session_start();
-if($_SESSION['user'] && $_SESSION['final']){
+if($_SESSION['user'] && $_SESSION['final'] ){
+
+
+foreach($_SESSION['displayedQuestionArr'] as $element){
+   echo' <img class=" pl-2 pr-2" id="questionImg" src="quesImages/'.$element.'" style="max-width:100%;max-height:20em">';
+}
+
+
 ?>
 
 <!DOCTYPE html>
