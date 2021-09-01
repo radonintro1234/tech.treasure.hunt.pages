@@ -1,7 +1,8 @@
 <?php 
 session_start();
-if(isset($user)&& $_SESSION['heist_solved']){
-
+if(isset($_SESSION['user'])&& $_SESSION['heist_solved']){
+    
+echo ' solved';
 }
 else{
     header('location:index.html');
