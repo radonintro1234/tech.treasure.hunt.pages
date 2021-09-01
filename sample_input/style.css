@@ -4,14 +4,14 @@ body {
 
 .answerDiv {
     background: rgba(255, 255, 255, 0.5);
-    margin-right: 2rem;
+    /* margin-right: 2rem; */
     transform: translateY(5vh);
 }
 
 .questionDiv {
     width: 40em;
     margin-top: 4rem;
-    margin-left: 3rem;
+    /* margin-left: 3rem; */
     transform: translateY(5vh);
     margin-bottom: 3rem;
     height: 30em;
@@ -26,13 +26,14 @@ body {
 #form-body {
     background-image: url(images/2020-money-heist-ei.jpg);
     background-repeat: no-repeat;
-    width: 50rem;
 }
 
 #signup-form {
     background: transparent;
-    margin-left: 60rem;
-    transform: translateY(50vh);
+    /* margin-left: 60rem; */
+    float: right;
+    transform: translateY(10vh);
+    width: 30vw;
 }
 
 .form-control:not(:placeholder-shown) {
@@ -60,5 +61,8 @@ body {
     .questionDiv {
         width: 30em;
         height: 20em;
+    }
+    .answerDiv {
+        width:
     }
 }
