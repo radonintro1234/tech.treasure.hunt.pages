@@ -52,7 +52,7 @@ session_start();
     } else {
         $time = time();
         $time_required = strval(gmdate('H:i:s', ($time - $_SESSION['start_time'])));
-        $query = 'insert into records (submit_time ,team_name,reg_time,required_time) Values(?,?,?,?)';
+        $query = 'insert ignore into records (submit_time ,team_name,reg_time,required_time) Values(?,?,?,?)';
         $stmt = mysqli_stmt_init($con);
         if (!mysqli_stmt_prepare($stmt, $query)) {
             print "Failed to prepare statement\n";
