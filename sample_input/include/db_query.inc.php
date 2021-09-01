@@ -14,7 +14,7 @@
         print "Failed to prepare statement\n";
     }
     $p='s';
-    mysqli_stmt_bind_param($stmt, $currentLetter, $p);
+    mysqli_stmt_bind_param($stmt,$p, $currentLetter, );
         
     mysqli_stmt_execute($stmt);
         
@@ -23,7 +23,11 @@
         $numOfRows=mysqli_num_rows($result);
         
        if($numOfRows != 0){
-           $qIndex=0;
+           if($numOfRows==1){
+            $qIndex=0;    
+           }
+           else{
+           $qIndex=random_int(0,$numOfRows-1);}
            $quesData=mysqli_fetch_all($result,MYSQLI_ASSOC);
            return $quesData[$qIndex];
        }

@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
         echo '<script>alert("correct");document.location="../final_question.php";</script>';
         exit();
     }
-      echo '<script>alert("correct");document.location="../question.php";</script>';
+      echo '<script>alert("correct'.count($_SESSION['letterArr']).'");document.location="../question.php";</script>';
  //new ques will be fetched
     }
     else{

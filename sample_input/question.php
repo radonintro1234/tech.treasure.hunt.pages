@@ -1,8 +1,7 @@
 <?php
 // session_start(); //uncomment this when login connected
-require 'include/initial_config.inc.php';
+require_once 'include/initial_config.inc.php';
 if(isset($_SESSION['user']) || true){
-
 if($_SESSION['newQuesFlag']){    
 require 'include/get_ques.inc.php'; //new ques taken only if flag is set
 }?>
