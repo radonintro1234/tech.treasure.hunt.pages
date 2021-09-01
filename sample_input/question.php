@@ -88,7 +88,7 @@ require 'include/get_ques.inc.php'; //new ques taken only if flag is set
                             <div class=" ">
                                 <h1 class=" text-dark ">Answer</h1>
                                 <div class="">
-                                    <form action="include/check_ans.php" method="POST " class=" " style="padding: 10px " source="email " name="form ">
+                                    <form action="include/check_ans.php" method="POST" class=" " style="padding: 10px " source="email " name="form ">
                                         <!-- <input type="hidden " id="siteId " name="siteId " value="654333 " wfd-invisible="true "> -->
                                         <!-- <input type="hidden " id="pageId " name="pageId " value="654343 " wfd-invisible="true "> -->
                                         <div class="u-form-group u-form-name u-form-group-1 ">
