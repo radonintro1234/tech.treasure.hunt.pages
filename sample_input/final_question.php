@@ -1,6 +1,6 @@
 <?php 
 session_start();
-if($_SESSION['user'] && $_SESSION['final'] || true){
+if($_SESSION['user'] && $_SESSION['final']){
 ?>
 
 <!DOCTYPE html>

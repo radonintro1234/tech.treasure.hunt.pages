@@ -9,7 +9,7 @@ session_start();
         if($answer=='stealthy'){                             # compares with stealthy
            $_SESSION['heist_solved']=1;
            require_once 'db_query.inc.php';
-           
+           add_submit_time_to_db($con,$_SESSION['user']);
             header('location:../heist_completed.php');
         }
         else{

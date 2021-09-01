@@ -2,7 +2,7 @@
 session_start();
 if(isset($_POST['submit'])){
   $userAns=strtolower(strip_tags($_POST['answer']));
-  echo count($_SESSION['letterArr']);
+  
   
     if(password_verify($userAns, $_SESSION['currentAns'])){
       $_SESSION['newQuesFlag']=1;
@@ -16,7 +16,7 @@ if(isset($_POST['submit'])){
  //new ques will be fetched
     }
     else{
-      header('<script>alert("Wrong answer!!");document.location="../question.php";</script>');
+      echo '<script>alert("Wrong answer!!");document.location="../question.php";</script>';
     }
 }
 else{

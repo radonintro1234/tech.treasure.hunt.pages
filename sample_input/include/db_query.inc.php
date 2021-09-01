@@ -39,4 +39,48 @@
     
 }
 
+function add_submit_time_to_db($con,$teamname){
+    
+    if($con === false){
+        die("ERROR: Could not connect. " . mysqli_connect_error());
+        echo 'Cannot connect to database';
+    }
+    else{
+        $time=time();
+        $time_required=strval(gmdate('H:i:s', ($time-$_SESSION['start_time'])));
+        $query='insert into records (submit_time ,team_name,reg_time,required_time) Values(?,?,?,?)';
+        $stmt= mysqli_stmt_init($con);
+        if(!mysqli_stmt_prepare($stmt, $query))
+    {
+        print "Failed to prepare statement\n";
+    }
+    $time=strval($time);
+    $start_time=strval($_SESSION['start_time']);
+    $p='ssss';
+    mysqli_stmt_bind_param($stmt,$p,$time, $teamname,$start_time,$time_required);
+        
+    mysqli_stmt_execute($stmt);
+        
+        $result = mysqli_stmt_get_result($stmt);
+        mysqli_stmt_close($stmt);
+        
+        
+       if($result){
+          return true;
+           }
+          return false;
+    }
+
+
+}
+
+
+function add_start_time_to_db($teamname){
+   
+   $_SESSION['start_time']=time();
+   return true;
+
+
+}
+
 ?>

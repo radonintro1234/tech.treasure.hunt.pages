@@ -50,7 +50,9 @@
     <div class="container-fluid border border-dark" style="height:50em;background-image: url(images/home4.jpg);">
         <H1 class="text-light" style="margin-top:20rem;font-family: 'ZCOOL KuaiLe', cursive;font-size:4rem;margin-left:2rem;">Tesoro Heist</H1>
         <hr style=" background-color:white;width:30em;margin-left: 0; "></hr>
-        <button type="button" class="pl-5 pr-5 btn btn-lg btn-danger rounded-pill" style="font-family: 'Nunito Sans', sans-serif;margin-left: 7rem;">START NOW</button>
+        <form action="form.html">
+        <button type="submit"  class="pl-5 pr-5 btn btn-lg btn-danger rounded-pill" style="font-family: 'Nunito Sans', sans-serif;margin-left: 7rem;">START NOW</button>
+    </form>
     </div>
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
