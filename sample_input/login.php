@@ -1,4 +1,5 @@
-<?php
+<?php 
+session_start();
     
     require './include/dbconfig.php';
     require './include/check_login.php';
@@ -21,8 +22,9 @@
             </script>";
         }
         else{
-            session_start();
+           
             $_SESSION['user'] = $team_name;
+            require_once 'include/initial_config.inc.php';
             echo "
             <script>
                 window.location.href= './question.php';
