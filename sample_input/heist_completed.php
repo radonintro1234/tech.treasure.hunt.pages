@@ -35,7 +35,7 @@ if(true || isset($_SESSION['user'])&& $_SESSION['heist_solved'] ){
        ?>
         </h2> 
     </div> 
-        <h1 id="hiddentext" class="text-light text-center mt-4">This Is Not The True Ending..<snap><a class="secretlink" href="#">.</a></snap>..</h1> 
+        <h1 id="hiddentext" class="text-light text-center mt-4">This Is Not The True Ending..<snap><a class="secretlink" href="last.php">.</a></snap>..</h1> 
 </body>
 
 </html>

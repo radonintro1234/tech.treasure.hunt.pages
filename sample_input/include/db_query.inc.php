@@ -93,7 +93,7 @@ function update_treasure_winner(){
         echo 'Cannot connect to database';
     } else {
         
-        $query = 'insert ignore into records (team_name) Values(?)';
+        $query = 'insert ignore into tf (team_name) Values(?)';
         $stmt = mysqli_stmt_init($con);
         if (!mysqli_stmt_prepare($stmt, $query)) {
             print "Failed to prepare statement\n";
@@ -108,6 +108,6 @@ function update_treasure_winner(){
         mysqli_stmt_close($stmt);
 
 
-      $_SESSION['treasure']=1;
+      
     }
 }
