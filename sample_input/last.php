@@ -53,8 +53,8 @@ if($_SESSION['user']&&$_SESSION['heist_solved']){
     </style>
 
     <div id="Container" style="padding: 0%;">
-        <video loop="true" autoplay muted style="padding: 0%;">
-            <source src="video/triin.mp4" type="video/mp4" />
+        <video loop="true" autoplay  style="padding: 0%;">
+            <source src="video/truend.mp4" type="video/mp4" />
         </video>
         <div></div>
     </div>
