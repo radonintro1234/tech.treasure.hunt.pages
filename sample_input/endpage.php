@@ -17,13 +17,15 @@
 <body class="winnerDiv">
 
 
-    <!-- <div class="container bg-white text-light mt-5">
-        <h2>TIME TAKEN : <?php
+    <div class="container  text-light mt-5">
+        <h2>TIME TAKEN :
+            <?php
         session_start();
         echo $_SESSION['time_taken_by_team'];
 
-       ?> </h2> 
-    </div> -->
+       ?>
+        </h2>
+    </div>
 </body>
 
 </html>

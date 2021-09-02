@@ -86,11 +86,3 @@
         margin: 0;
         overflow-y: hidden;
     }
-    
-    .intro-video {
-        padding-top: 80rem;
-    }
-    
-    .start-ele {
-        transform: translateY(40vh);
-    }

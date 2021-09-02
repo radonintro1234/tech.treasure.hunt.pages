@@ -54,7 +54,9 @@
         <!-- <H1 class="text-light" style="margin-top:20rem;font-family: 'ZCOOL KuaiLe', cursive;font-size:4rem;margin-left:2rem;">Tesoro Heist</H1> -->
         <H1 class="text-light" style="margin-top:20rem;font-family: 'ZCOOL KuaiLe', cursive;font-size:4rem;margin-left:2rem;">Tesoro Heist</H1>
         <hr style=" background-color:white;width:30em;margin-left: 0; "></hr>
-        <button type="" class="pl-5 pr-5 btn btn-lg btn-danger rounded-pill" style="font-family: 'Nunito Sans', sans-serif;margin-left: 7rem;">START NOW</button>
+        <form action="form.html">
+        <button type="submit"  class="pl-5 pr-5 btn btn-lg btn-danger rounded-pill" style="font-family: 'Nunito Sans', sans-serif;margin-left: 7rem;">START NOW</button>
+    </form>
         <div class=" container fixed-bottom " style="margin-left:80rem; ">
             <h3 class="text-light ml-5 ">Gold Sponsor:</h3>
             <image src="images/aab.png " style="width:240px;height:75px ">
