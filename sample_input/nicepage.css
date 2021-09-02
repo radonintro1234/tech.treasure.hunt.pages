@@ -4822,22 +4822,9 @@ a {
 }
 
 .u-input {
-<<<<<<< HEAD
-  display: block;
-  
-  padding: 10px 12px;
-  background-image: none;
-  background-clip: padding-box;
-  border: none;
-  border-radius: 3px;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  background-color: transparent;
-  color: inherit;
-  height: auto;
-=======
     display: block;
     width: 75%;
-    padding: 10px 12px;
+    padding: 10px 25px;
     background-image: none;
     background-clip: padding-box;
     border: none;
@@ -4846,7 +4833,6 @@ a {
     background-color: transparent;
     color: inherit;
     height: auto;
->>>>>>> eaa08b6710d57782f77cc6204a6518d9147d8ad9
 }
 
 .u-form-horizontal label,

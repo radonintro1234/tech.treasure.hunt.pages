@@ -81,23 +81,13 @@ require 'include/get_ques.inc.php'; //new ques taken only if flag is set
                 </div>
             </div>
             <!-- answer section -->
-<<<<<<< HEAD
-            <div class="col-md-6 col-sm-6">
-                
-                    <div class="container">
+            <div class="col-md-6 col-sm-6" >
+            <div class="container ">
                     <div class="u-align-center u-container-style u-group u-group-1 answerDiv border border-danger rounded-lg ">
-                        <div class="u-container-layout u-align-top u-container-layout-1 ">
+                        <div class="u-container-layout u-valign-top u-container-layout-1 ">
                             <h1 class="u-custom-font u-font-pt-sans u-text u-text-1 text-dark ">Answer</h1>
                             <div class="u-align-left u-expanded-width-xs u-form u-form-1 ">
-=======
-            <div class="col-md-6 col-sm-6" >
-                <div class="ansContainer " id="carousel_f8f3 " >
-                    
-                        <div class=" answerDiv border border-danger rounded-lg ">
-                            
-                                <h1 class=" text-dark answerLabel">Answer</h1>
                                 
->>>>>>> 2500e5ac1344b4d4639c8fa7ab410f673a81566a
                                     <form action="include/check_ans.php" method="POST" class=" " style="padding: 10px " source="email " name="form ">
                                         <!-- <input type="hidden " id="siteId " name="siteId " value="654333 " wfd-invisible="true "> -->
                                         <!-- <input type="hidden " id="pageId " name="pageId " value="654343 " wfd-invisible="true "> -->
@@ -105,7 +95,7 @@ require 'include/get_ques.inc.php'; //new ques taken only if flag is set
 
                                             <label for="name-5a14 " class="u-form-control-hidden u-label " wfd-invisible="true ">Name</label>
 
-                                            <input type="text " placeholder="Enter your Answer " id="name-5a14 " name="answer" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-white " required=" " autofocus="true">
+                                            <input type="text " placeholder="Enter your Answer " id="name-5a14 " name="answer" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-white align-center" required=" " autofocus="true">
 
                                         </div>
                                         <div class="u-align-center u-form-group u-form-submit u-form-group-2 ">
