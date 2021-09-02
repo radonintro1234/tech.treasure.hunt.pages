@@ -95,7 +95,7 @@ require 'include/get_ques.inc.php'; //new ques taken only if flag is set
 
                                             <label for="name-5a14 " class="u-form-control-hidden u-label " wfd-invisible="true ">Name</label>
 
-                                            <input type="text " placeholder="Enter your Answer " id="name-5a14 " name="answer" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-white align-center" required=" " autofocus="true">
+                                            <input type="text " placeholder="Enter your Answer " id="name-5a14 " name="answer" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-white align-center" required=" " autofocus="true" autocomplete="off">
 
                                         </div>
                                         <div class="u-align-center u-form-group u-form-submit u-form-group-2 ">
