@@ -44,15 +44,23 @@
 </head>
 
 <body id="home_page">
-
+    <audio loop autoplay>
+        <source src="audio/startsong.mp3" type="audio/mp3">
+    </audio>
 
     <!-- Optional JavaScript; choose one of the two! -->
+
     <div class="container-fluid border border-dark" style="height:50em;background-image: url(images/home4.jpg);">
+        <!-- <H1 class="text-light" style="margin-top:20rem;font-family: 'ZCOOL KuaiLe', cursive;font-size:4rem;margin-left:2rem;">Tesoro Heist</H1> -->
         <H1 class="text-light" style="margin-top:20rem;font-family: 'ZCOOL KuaiLe', cursive;font-size:4rem;margin-left:2rem;">Tesoro Heist</H1>
         <hr style=" background-color:white;width:30em;margin-left: 0; "></hr>
         <form action="form.html">
         <button type="submit"  class="pl-5 pr-5 btn btn-lg btn-danger rounded-pill" style="font-family: 'Nunito Sans', sans-serif;margin-left: 7rem;">START NOW</button>
     </form>
+        <div class=" container fixed-bottom " style="margin-left:80rem; ">
+            <h3 class="text-light ml-5 ">Gold Sponsor:</h3>
+            <image src="images/aab.png " style="width:240px;height:75px ">
+        </div>
     </div>
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
