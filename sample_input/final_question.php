@@ -92,7 +92,7 @@ if($_SESSION['user'] && $_SESSION['final'] ){
     <hr>
     <form method="post" action="./include/check_final_ans.php">
         <div class="container-fluid input-group input-group-lg mb-5 w-50 text-center">
-            <input type="text" class="form-control border border-danger shadow shadow-md text-center" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Enter Your Answer" name="answer" autofocus>
+            <input type="text" class="form-control border border-danger shadow shadow-md text-center" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Enter Your Answer" name="answer" autofocus="true" autocomplete="false">
         </div>
         <div class="u-align-center u-form-group u-form-submit u-form-group-2 ">
             <!--- <a href="" class="u-border-2 u-border-black u-btn u-btn-submit u-button-style u-hover-black u-none u-text-black u-text-hover-white u-btn-1 ">Submit</a>

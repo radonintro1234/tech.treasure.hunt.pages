@@ -1,3 +1,13 @@
+<?php 
+session_start();
+if($_SESSION['user']&&$_SESSION['heist_solved']){
+    require 'include/db_query.inc.php';
+    update_treasure_winner();
+    session_destroy();
+
+?>
+
+
 <html lang="en">
 
 <head>
@@ -51,3 +61,11 @@
 </body>
 
 </html>
+
+<?php
+}
+
+else{
+    header('location:index.php');
+}
+?>
