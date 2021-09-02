@@ -45,7 +45,7 @@
 
 <body id="home_page">
     <audio loop autoplay>
-        <source src="audio/startsong (1).mp3.mp3" type="audio/mp3">
+        <source src="audio/startsong (1).mp3" type="audio/mp3">
     </audio>
 
     <!-- Optional JavaScript; choose one of the two! -->

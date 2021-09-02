@@ -73,11 +73,11 @@ require 'include/get_ques.inc.php'; //new ques taken only if flag is set
         </div> -->
 
         <!-- <div class="container-fluid mt-5"> -->
-        <div class="row" class="questionContent">
+        <div class="row questionContent">
             <!-- question div -->
             <div class="col-md-6 col-sm-6">
                 <div class="container  text-center pt-5 pb-5 border border-dark questionDiv ">
-                    <img class=" pl-2 pr-2" id="questionImg" src="quesImages/<?php echo $_SESSION['currentQues'] ?>" style="max-width:100%;max-height:20em">
+                    <img class=" pl-2 pr-2" id="questionImg" src="quesImages/<?php echo $_SESSION['currentQues'] ?>" style="max-height:60vh;">
                 </div>
             </div>
             <!-- answer section -->
@@ -105,7 +105,8 @@ require 'include/get_ques.inc.php'; //new ques taken only if flag is set
                                     </form>
                                 
                             </div>
-                        
+                        </div> 
+                    </div>
                     
     </div>
             </div>
