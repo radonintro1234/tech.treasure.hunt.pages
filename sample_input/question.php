@@ -99,7 +99,7 @@ require 'include/get_ques.inc.php'; //new ques taken only if flag is set
 
                                         </div>
                                         <div class="u-align-center u-form-group u-form-submit u-form-group-2 ">
-                                        <button type="submit " value="submit " name="submit"  class="u-border-2 u-border-black u-btn u-btn-submit u-button-style u-hover-black u-none u-text-black u-text-hover-white u-btn-1 ">Submit</button>
+                                        <a href="# " class="u-border-2 u-border-black u-btn u-btn-submit u-button-style u-hover-black u-none u-text-black u-text-hover-white u-btn-1 ">Submit</a>
 
                                         </div>
                                     </form>
