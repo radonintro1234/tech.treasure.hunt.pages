@@ -61,7 +61,9 @@ require 'include/get_ques.inc.php'; //new ques taken only if flag is set
         }
     </style>
 </head>
-
+<audio loop autoplay >
+        <source src="audio/startsong (1).mp3" type="audio/mp3">
+    </audio>
 <body class="questionpage">
     <div class="container-fluid">
 
