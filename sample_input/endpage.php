@@ -20,7 +20,7 @@
     <div class="container  text-light mt-5">
         <h2>TIME TAKEN :
             <?php
-        session_start();
+
         echo $_SESSION['time_taken_by_team'];
 
        ?>

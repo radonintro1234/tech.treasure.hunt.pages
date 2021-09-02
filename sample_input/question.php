@@ -62,7 +62,7 @@ require 'include/get_ques.inc.php'; //new ques taken only if flag is set
     </style>
 </head>
 
-<body>
+<body class="questionpage">
     <div class="container-fluid">
 
         <div class="container" id="logodiv1">
@@ -82,12 +82,12 @@ require 'include/get_ques.inc.php'; //new ques taken only if flag is set
             </div>
             <!-- answer section -->
             <div class="col-md-6 col-sm-6">
-                <section class=" " id="carousel_f8f3 ">
-                    <div class="">
-                        <div class=" answerDiv border border-danger rounded-lg ">
-                            <div class=" ">
-                                <h1 class=" text-dark ">Answer</h1>
-                                <div class="">
+                
+                    <div class="container">
+                    <div class="u-align-center u-container-style u-group u-group-1 answerDiv border border-danger rounded-lg ">
+                        <div class="u-container-layout u-align-top u-container-layout-1 ">
+                            <h1 class="u-custom-font u-font-pt-sans u-text u-text-1 text-dark ">Answer</h1>
+                            <div class="u-align-left u-expanded-width-xs u-form u-form-1 ">
                                     <form action="include/check_ans.php" method="POST" class=" " style="padding: 10px " source="email " name="form ">
                                         <!-- <input type="hidden " id="siteId " name="siteId " value="654333 " wfd-invisible="true "> -->
                                         <!-- <input type="hidden " id="pageId " name="pageId " value="654343 " wfd-invisible="true "> -->
