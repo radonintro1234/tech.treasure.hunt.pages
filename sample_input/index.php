@@ -57,9 +57,15 @@
         <form action="form.html">
             <button type="submit" class="pl-5 pr-5 btn btn-lg btn-danger rounded-pill" style="font-family: 'Nunito Sans', sans-serif;margin-left: 7rem;">START NOW</button>
         </form>
-        <div class=" container fixed-bottom " style="margin-left:80rem; ">
-            <h3 class="text-light ml-5 ">Gold Sponsor:</h3>
-            <image src="images/aab.png " style="width:240px;height:75px ">
+        <div class="container-fluid fixed-top">
+       
+        <p class="text-light d-flex justify-content-end pr-5" style="font-size:2em;">Gold Sponsor:</p>
+        
+        <div class=" d-flex justify-content-end">
+        <img src="images/aab.png" alt="" height="85" width="280">
+        </div>
+        </div>
+        
         </div>
     </div>
 
