@@ -100,7 +100,7 @@ function update_treasure_winner(){
         }
     
         $p = 's';
-        mysqli_stmt_bind_param($stmt, $p, $_SESSION['team_name']);
+        mysqli_stmt_bind_param($stmt, $p, $_SESSION['user']);
 
         mysqli_stmt_execute($stmt);
 
