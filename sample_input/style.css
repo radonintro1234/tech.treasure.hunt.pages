@@ -40,7 +40,7 @@
         background: transparent;
         /* margin-left: 60rem; */
         float: right;
-        transform: translateY(10vh);
+        transform: translateY(50%);
         width: 30vw;
     }
     
@@ -85,4 +85,12 @@
         padding: 0;
         margin: 0;
         overflow-y: hidden;
+    }
+    
+    .intro-video {
+        padding-top: 80rem;
+    }
+    
+    .start-ele {
+        transform: translateY(40vh);
     }
