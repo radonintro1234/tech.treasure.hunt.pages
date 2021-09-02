@@ -65,6 +65,7 @@ require 'include/get_ques.inc.php'; //new ques taken only if flag is set
         <source src="audio/startsong (1).mp3" type="audio/mp3">
     </audio>
 <body class="questionpage">
+
     <div class="container-fluid">
 
         <div class="container" id="logodiv1">
@@ -85,6 +86,7 @@ require 'include/get_ques.inc.php'; //new ques taken only if flag is set
             <!-- answer section -->
             <div class="col-md-6 col-sm-6" >
             <div class="container ">
+
                     <div class="u-align-center u-container-style u-group u-group-1 answerDiv border border-danger rounded-lg ">
                         <div class="u-container-layout u-valign-top u-container-layout-1 ">
                             <h1 class="u-custom-font u-font-pt-sans u-text u-text-1 text-dark ">Answer</h1>
