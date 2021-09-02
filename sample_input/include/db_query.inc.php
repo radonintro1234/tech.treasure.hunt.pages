@@ -83,3 +83,31 @@ function add_start_time_to_db($teamname)
     $_SESSION['start_time'] = time();
     return true;
 }
+
+
+function update_treasure_winner(){
+    require 'dbconfig.php';
+    session_start();
+    if ($con === false) {
+        die("ERROR: Could not connect. " . mysqli_connect_error());
+        echo 'Cannot connect to database';
+    } else {
+        
+        $query = 'insert ignore into records (team_name) Values(?)';
+        $stmt = mysqli_stmt_init($con);
+        if (!mysqli_stmt_prepare($stmt, $query)) {
+            print "Failed to prepare statement\n";
+        }
+    
+        $p = 's';
+        mysqli_stmt_bind_param($stmt, $p, $_SESSION['team_name']);
+
+        mysqli_stmt_execute($stmt);
+
+        $result = mysqli_stmt_get_result($stmt);
+        mysqli_stmt_close($stmt);
+
+
+      $_SESSION['treasure']=1;
+    }
+}
