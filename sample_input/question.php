@@ -62,7 +62,7 @@ require 'include/get_ques.inc.php'; //new ques taken only if flag is set
     </style>
 </head>
 
-<body>
+<body class="questionBody">
     <div class="container-fluid">
 
         <div class="container" id="logodiv1">
@@ -73,7 +73,7 @@ require 'include/get_ques.inc.php'; //new ques taken only if flag is set
         </div> -->
 
         <!-- <div class="container-fluid mt-5"> -->
-        <div class="row">
+        <div class="row" class="questionContent">
             <!-- question div -->
             <div class="col-md-6 col-sm-6">
                 <div class="container  text-center pt-5 pb-5 border border-dark questionDiv ">
@@ -81,13 +81,13 @@ require 'include/get_ques.inc.php'; //new ques taken only if flag is set
                 </div>
             </div>
             <!-- answer section -->
-            <div class="col-md-6 col-sm-6">
-                <section class=" " id="carousel_f8f3 ">
-                    <div class="">
+            <div class="col-md-6 col-sm-6" >
+                <div class="ansContainer " id="carousel_f8f3 " >
+                    
                         <div class=" answerDiv border border-danger rounded-lg ">
-                            <div class=" ">
-                                <h1 class=" text-dark ">Answer</h1>
-                                <div class="">
+                            
+                                <h1 class=" text-dark answerLabel">Answer</h1>
+                                
                                     <form action="include/check_ans.php" method="POST" class=" " style="padding: 10px " source="email " name="form ">
                                         <!-- <input type="hidden " id="siteId " name="siteId " value="654333 " wfd-invisible="true "> -->
                                         <!-- <input type="hidden " id="pageId " name="pageId " value="654343 " wfd-invisible="true "> -->
@@ -103,11 +103,11 @@ require 'include/get_ques.inc.php'; //new ques taken only if flag is set
 
                                         </div>
                                     </form>
-                                </div>
+                                
                             </div>
-                        </div>
-                    </div>
-                </section>
+                        
+                    
+    </div>
             </div>
         </div>
     </div>
