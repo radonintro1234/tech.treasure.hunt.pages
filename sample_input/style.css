@@ -57,6 +57,10 @@
     width: 30vw;
 }
 
+.form-group {
+    width: 20vw;
+}
+
 .form-control:not(:placeholder-shown) {
     background-color: #cf4154!important;
     color: black;
